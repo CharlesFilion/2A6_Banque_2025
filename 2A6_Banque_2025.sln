@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanqueLib", "BanqueLib\BanqueLib.csproj", "{7AB96D02-5941-4363-BB21-A9CDEF2BDADA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTesterCompte", "ConsoleTesterCompte\ConsoleTesterCompte.csproj", "{5F2ACC40-D459-4F57-9855-45E5CCB663B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7AB96D02-5941-4363-BB21-A9CDEF2BDADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AB96D02-5941-4363-BB21-A9CDEF2BDADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AB96D02-5941-4363-BB21-A9CDEF2BDADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F2ACC40-D459-4F57-9855-45E5CCB663B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F2ACC40-D459-4F57-9855-45E5CCB663B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F2ACC40-D459-4F57-9855-45E5CCB663B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F2ACC40-D459-4F57-9855-45E5CCB663B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

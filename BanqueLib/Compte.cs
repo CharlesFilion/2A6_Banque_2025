@@ -74,7 +74,14 @@ namespace BanqueLib
 
         public string Description()
         {
-            return $"[CF] * * * * * * * * * * * * * * * * * * * * * * * * * * * *\n[CF] *\n[CF] *     Compte : {numéro}\n[CF] *         De : {détenteur}\n[CF] *      Solde : {solde} $\n[CF] *     Statut : {statut}\n[CF] *\n[CF] * * * * * * * * * * * * * * * * * * * * * * * * * * * *";
+            string description = "";
+            description += "[CF] * * * * * * * * * * * * * * * * * * * * * * * * *";
+            description += $"\n[CF]      Compte : {numéro}".PadRight(54, ' ') + '*';
+            description += $"\n[CF]          De : {détenteur}".PadRight(54, ' ') + '*';
+            description += $"\n[CF]       Solde : {solde}".PadRight(54, ' ') + '*';
+            description += $"\n[CF]      Statut : {statut}".PadRight(54, ' ') + '*';
+            description += "\n[CF] * * * * * * * * * * * * * * * * * * * * * * * * *";
+            return description;
         }
 
         public bool Précision(decimal nombre)

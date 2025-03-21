@@ -65,7 +65,7 @@ namespace BanqueLib
             {
                 throw new ArgumentNullException();
             }
-            else if(string.IsNullOrWhiteSpace(Détenteur))
+            else if (string.IsNullOrWhiteSpace(Détenteur))
             {
                 throw new ArgumentException();
             }
@@ -76,10 +76,10 @@ namespace BanqueLib
         {
             string description = "";
             description += "[CF] * * * * * * * * * * * * * * * * * * * * * * * * *";
-            description += $"\n[CF]      Compte : {numéro}".PadRight(54, ' ') + '*';
-            description += $"\n[CF]          De : {détenteur}".PadRight(54, ' ') + '*';
-            description += $"\n[CF]       Solde : {solde}".PadRight(54, ' ') + '*';
-            description += $"\n[CF]      Statut : {statut}".PadRight(54, ' ') + '*';
+            description += $"\n[CF] *      Compte : {numéro}".PadRight(54, ' ') + '*';
+            description += $"\n[CF] *          De : {détenteur}".PadRight(54, ' ') + '*';
+            description += $"\n[CF] *       Solde : {solde:C}".PadRight(54, ' ') + '*';
+            description += $"\n[CF] *      Statut : {statut}".PadRight(54, ' ') + '*';
             description += "\n[CF] * * * * * * * * * * * * * * * * * * * * * * * * *";
             return description;
         }

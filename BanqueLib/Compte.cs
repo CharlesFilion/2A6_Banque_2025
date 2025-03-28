@@ -120,7 +120,6 @@ namespace BanqueLib
 
             if (statut == StatutCompte.Gelé || nombre < 0)
             {
-                throw new ArgumentOutOfRangeException();
                 return false;
             }
             return true;
@@ -166,7 +165,7 @@ namespace BanqueLib
         {
             if (statut == StatutCompte.Gelé)
             {
-                throw new InvalidOperationException();
+                Console.WriteLine("\n* Impossible de geler un compte déjà gelé.");
             }
             else
             {
@@ -184,7 +183,7 @@ namespace BanqueLib
             }
             else
             {
-                throw new InvalidOperationException();
+                Console.WriteLine("\n* Impossible de dégeler un compte non gelé.");
             }
         }
     }

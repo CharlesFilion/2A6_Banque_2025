@@ -37,6 +37,16 @@ while (true)
             NouveauCompte.SetDétenteur(nouveauDétenteur);
             break;
         case '2':
+            NouveauCompte.PeutDéposer();
+            Console.Write("\n* Peut déposer? ");
+            if(NouveauCompte.PeutDéposer() == false)
+            {
+                Console.Write("Non\n");
+            }
+            else
+            {
+                Console.Write("Oui\n");
+            }
             break;
         case '3':
             break;
@@ -55,12 +65,14 @@ while (true)
             {
                 Console.WriteLine("\n* Le compte a été gelé");
             }
-            else
-            {
-                Console.WriteLine("\n* Impossible de geler un compte déjà gelé.");
-            }
             break;
         case '9':
+            estGelé2 = NouveauCompte.EstGelé;
+            NouveauCompte.Dégeler();
+            if (NouveauCompte.EstGelé != estGelé2)
+            {
+                Console.WriteLine("\n* Le compte a été dégelé");
+            }
             break;
         case 'q':
             Environment.Exit(0);

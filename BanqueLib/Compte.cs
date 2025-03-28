@@ -104,7 +104,6 @@ namespace BanqueLib
 
             if (nombre > solde || statut == StatutCompte.Gelé || nombre < 0)
             {
-                throw new ArgumentOutOfRangeException();
                 return false;
             }
             return true;
@@ -154,7 +153,7 @@ namespace BanqueLib
         {
             if(statut == StatutCompte.Gelé || solde == 0)
             {
-                throw new InvalidOperationException();
+                return 0;
             }
             decimal valeur = solde;
             solde = 0;

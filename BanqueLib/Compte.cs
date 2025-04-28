@@ -1,10 +1,12 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using System.Reflection.Metadata;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BanqueLib
 {
     public class Compte
     {
+        private Random rnd = new Random();
         private int numéro;
         private string détenteur;
         private decimal solde;
@@ -70,6 +72,14 @@ namespace BanqueLib
                 throw new ArgumentException();
             }
             détenteur = Détenteur.Trim();
+        }
+
+        public void SetRandomSolde()
+        {
+            decimal montant;
+            montant = rnd.Next(0, 10000);
+            montant /= 100;
+            solde = montant;
         }
 
         public string Description()
